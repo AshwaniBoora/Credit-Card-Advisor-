@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Step 2: Your Spending</h2>
+<form method="POST">
+  {{ form.hidden_tag() }}
+  {{ form.fuel.label }} {{ form.fuel(class="form-control mb-2") }}
+  {{ form.travel.label }} {{ form.travel(class="form-control mb-2") }}
+  {{ form.groceries.label }} {{ form.groceries(class="form-control mb-2") }}
+  {{ form.dining.label }} {{ form.dining(class="form-control mb-2") }}
+  {{ form.submit(class="btn btn-primary") }}
+</form>
+{% endblock %}

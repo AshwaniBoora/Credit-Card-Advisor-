@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Your Top Credit Card Matches</h2>
+<div class="row">
+{% for card in cards %}
+  <div class="col-md-4">
+    <div class="card mb-3">
+      <img src="{{ card.image_url }}" class="card-img-top" alt="{{ card.name }}">
+      <div class="card-body">
+        <h5 class="card-title">{{ card.name }}</h5>
+        <p class="card-text">{{ card.perks }}</p>
+        <a href="{{ card.apply_link }}" class="btn btn-success">Apply Now</a>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+</div>
+<a href="/" class="btn btn-secondary">Restart</a>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Step 4: Any Existing Cards?</h2>
+<form method="POST">
+  {{ form.hidden_tag() }}
+  {{ form.existing_cards.label }} {{ form.existing_cards(class="form-control mb-2") }}
+  {{ form.submit(class="btn btn-success") }}
+</form>
+{% endblock %}
